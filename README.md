@@ -1,52 +1,32 @@
-# Phase 3 Project
+# Welcome to the Lulu Luxury Database!
 
-## Requirements
+<img height="400" src="https://www.bjtonline.com/sites/bjtonline.com/files/styles/bjt30_article_large/public/time_tide-miavana-web.jpg?itok=itMq8Bd9&timestamp=1524495882"></img>
 
-1. Access a Sqlite3 database using Active Record.
-2. You should have a minimum of two models with a one to many relationship.
-3. You should build out a simple **React** frontend to give your user 3 of the 4
-   CRUD abilities for at least one of your resources. For example, build out a
-   todo list. A user should be able to create a new todo, see all todos,
-   update a todo item, and delete a todo. Todos can be grouped into categories,
-   so that a todo has many categories and categories have many todos.
-4. Use good OO design patterns. You should have separate classes for your
-   models.
+## About Lulu Luxury
 
-## Getting Started
+Lulu Luxury is a (fictional) vacation planning app for every person’s (or penguin’s) needs! This app is dedicated to Lulu the penguin from the Georgia aquarium.
 
-Clone down this repository. A basic Rack app is located in the `backend` folder.
+This app is a single page application that houses a React front end, and a Ruby backend.
 
-First, cd into the `backend` folder and run `bundle install` in your backend
-folder to install your gems.
+Be sure to check out the front-end repo <a href="http://github.com/bwennuh/luxury/lulu-app-frontend">here</a>!
 
-The `app/application.rb` file has an example GET route. Replace this route with
-routes for your project!
 
-**Start your server with:**
+## Database Info
 
-```sh
-shotgun --port=9292
-```
+### Patrons
 
-> **Note:** This will run your server on port
-> [http://localhost:9292](http://localhost:9292).
-> [shotgun](https://github.com/rtomayko/shotgun) is a ruby gem that will
-> automatically reload your Rack server. You may still need to refresh your
-> browser to see changes.
+Patron information includes the patron names, ages, phone numbers, emails, and a boolean check to see whether or not they've paid for the resort stay yet.
 
-Your backend and your frontend should be in two different repositories. Create a
-new repository in a separate folder with a React app for your frontend using
-[create-react-app][].
+### Resorts
 
-### Fetch Example
+Resort information includes the resort names, locations, availability dates, images of the resort, and the resort's current rating.
 
-Your React app should make fetch requests to your Rack backend! Here's an
-example:
+### Excursions
 
-```js
-fetch("http://localhost:9292/test")
-  .then((res) => res.json())
-  .then(console.log);
-```
+Excursion information includes the excursion names, excursion types, popularity ratings, excursion descriptions, images of the excursions, reservation dates, and the associated resort ID's (to be linked to their associated resorts).
 
-[create-react-app]: https://create-react-app.dev/docs/getting-started
+### Bookings
+
+Patrons, resorts, and excursions are linked via bookings.
+
+Booking information includes the patron ID (to get the associated patron), the resort ID (to get the associated resort), the excursion ID (to get the associated excursion, if applicable), the room type at the resort, and the start date & end date of the reservation stay.
