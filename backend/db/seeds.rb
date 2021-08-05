@@ -4,7 +4,6 @@ Excursion.destroy_all
 Patron.destroy_all
 Resort.destroy_all
 
-
 puts "Creating Resorts..."
 salamander_resort = Resort.create(resort_name: "Salamander Resort & Spa", location: "Nassau", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "https://cdn.sandals.com/beaches/v12/images/home/resorts/beaches-negril.jpg", rating: 0 )
 penguin_resort = Resort.create(resort_name: "Penguin Resort", location: "Galápagos", availability: Faker::Date.between(from: '2021-01-01', to: '2022-12-31'), image_url: "https://cf.bstatic.com/images/hotel/max1024x768/233/233068480.jpg", rating: 0)
